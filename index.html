@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rock-paper-scissors</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+	<script src="./js/app.js"></script>
+</head>
+<body>
+	<div class="container" id="initial-content">
+		<div class="title">
+			<h1>Rock Paper Scissors</h1>
+			<p>Choose Wisely, Triumph Gloriously</p>
+		</div>
+		<div id="initial-buttons">
+			<p><strong>Are you Ready?</strong></p>
+			<div class="buttons">
+				<button onclick="toggleRoundContent()">Yes!!</button>
+				<button onclick="toggleRoundContent()">Yeah</button>
+			</div>
+		</div>
+		<div class="hidden" id="initial-rounds">
+			<p><strong>Score to win</strong></p>
+			<div class="input">
+				<input type="number" id="max-score" min="1" max="10" value="1" required>
+				<button onclick="toggleGameContent()">Start</button>
+			</div>
+		</div>
+	</div>
+	<div class="container hidden" id="game-content">
+		<div class="round">
+			<div class="round-content">
+				<div class="player">
+					<div class="player-title">
+						<h3>Player</h3>
+					</div>
+					<div class="player-content">
+						<div class="player-choice" id="choice-align">
+							<div class="choice" id="rock">
+								<img src="./img/rock.png" alt="Rock" onclick="playerChoice('rock')">
+							</div>
+							<div class="choice" id="paper">
+								<img src="./img/paper.png" alt="Paper" onclick="playerChoice('paper')">
+							</div>
+							<div class="choice" id="scissors">
+								<img src="./img/scissors.png" alt="Scissors" onclick="playerChoice('scissors')">
+							</div>
+						</div>
+						<div class="player-score">
+							<p>Score: <span id="player-score">0</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="computer">
+					<div class="computer-title">
+						<h3>Computer</h3>
+					</div>
+					<div class="computer-content">
+						<div class="computer-choice" id="choice-align">
+							<div class="comChoice" id="choice1">
+								<img src="./img/rock.png" alt="Rock" onclick="computerChoice('rock')">
+							</div>
+							<div class="comChoice" id="choice2">
+								<img src="./img/paper.png" alt="Paper" onclick="computerChoice('paper')">
+							</div>
+							<div class="comChoice" id="choice3">
+								<img src="./img/scissors.png" alt="Scissors" onclick="computerChoice('scissors')">
+							</div>
+						</div>
+						<div class="computer-score">
+							<p>Score: <span id="computer-score">0</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="hidden" id="win">
+	<h1>&#x1F3C6; You Win! &#x1F3C6;</h1>
+	<button onclick="resetGame()">Play again?</button>
+</div>
+<div class="hidden" id="lose">
+	<h1>&#x1F62D; You Lose! &#x1F62D;</h1>
+	<button onclick="resetGame()">Play again?</button>
+</div>
+</body>
+</html>

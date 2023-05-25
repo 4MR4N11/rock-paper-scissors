@@ -1,0 +1,120 @@
+body {
+	background-color: #eee;
+  	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #333;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+	font-size: 3rem;
+	margin: 0;
+	padding: 0;
+}
+
+.title p{
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	font-size: 1.5rem;
+}
+
+
+.container {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5rem;
+	color: #333;
+	background-color: #fff;
+	border: 2px solid #333;
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+input {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5rem;
+	color: #333;
+	background-color: #fff;
+	border: 2px solid #333;
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin: 0 10px;
+	cursor: pointer;
+}
+.input {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	gap: 10px;
+}
+
+.hidden 
+{
+	display: none;
+}
+
+.choices {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	width: 150px;
+	height: 150px;
+	padding: 0;
+	border: 2px solid #333;
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin: 0 10px;
+}
+
+#choice-align {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+.highlight {
+	box-shadow: 0 0 0 5px lightgreen;
+	border-radius: 10px;
+}
+
+.choice,
+.comChoice{
+	cursor: pointer;
+	padding: 10px;
+}
+
+#lose,
+#win {
+	text-align: center;
+}
