@@ -57,7 +57,7 @@ function checkScore() {
 	else if (computerScore === maxScore) {
 		setTimeout(function() {
 			originalContent.classList.toggle('hidden');
-			win.classList.toggle('hidden');
+			lose.classList.toggle('hidden');
 			checkreset = 2;
 		}, 1000);
 	}
@@ -93,6 +93,7 @@ function resetGame() {
 	computerScoreId.textContent = computerScore = 0;
 	playerScoreId.textContent = playerScore = 0;
 	inputElement.value = maxScore = 1;
+	checkreset = 0;
 }
 
 async function compare(choice, computer) {
@@ -129,7 +130,7 @@ async function compare(choice, computer) {
 }
 
 async function computerChoice(computer) {
-	await sleep(1000);
+	await sleep(500);
 	var computerChoices = { 'rock': 1, 'paper': 2, 'scissors': 3}
 	var computerChoice1 = document.getElementById('choice1');
 	var computerChoice2 = document.getElementById('choice2');
